@@ -5,8 +5,14 @@
 .LoginButton {
   position: absolute;
   top: 50%;
-  width: 40%;
-  font-size: 30px;
+  width: 30%;
+  font-size: 25px;
+  color: black;
+  border-color: #c6c6c6;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #c6c6c6;
 }
 
 @media only screen and (max-width: 600px) {

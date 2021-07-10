@@ -1,22 +1,24 @@
 <div style="margin-top: 100px">
   <div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
-      <div class="p-1 bg-light rounded rounded-pill shadow-lg mb-4">
+    <div class="col-12 d-flex justify-content-center">
+      <div
+        style="width: 40%; border: 1px solid #c6c6c6; border-radius: 7px"
+        class="p-1 bg-light mb-4"
+      >
         <div class="input-group">
-          <div class="input-group-prepend">
-            <button [disabled]="true" class="btn btn-link text-primary">
-              <i class="fa fa-search"></i>
-            </button>
-          </div>
           <input
-            style="width: 70%; font-size: 15px"
-            type="search"
-            placeholder="Search for an Artist"
+            style="width: 70%; font-size: 20px; color: black"
+            placeholder="Search for an Artist..."
             aria-describedby="button-addon2"
             class="form-control border-0 bg-light"
             [(ngModel)]="searchValue"
-            (ngModelChange)="SearchArtists($event)"
+            (ngModelChange)="searchArtists($event)"
           />
+          <div class="input-group-prepend">
+            <button [disabled]="true" class="btn btn-link text-primary">
+              <i class="fa fa-search" style="color: #6c757d"></i>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -39,7 +41,7 @@
       "
       *ngFor="let artist of artists"
     >
-      <div style="border: 1px solid black; max-width: 300px">
+      <div style="border: 2px solid #b9b6b6; max-width: 300px">
         <img
           style="
             border-bottom: 1px solid black;
@@ -52,10 +54,10 @@
         />
         <p
           style="
-            padding: 6px;
+            padding: 4px;
             margin-top: 6px !important;
-            margin-bottom: 6px !important;
-            margin-left: 6px !important;
+            margin-bottom: 0px !important;
+            margin-left: 4px !important;
             font-size: medium;
             font-weight: bold;
             max-width: 100%;
@@ -63,11 +65,23 @@
         >
           {{ artist.name }}
         </p>
-        <p style="margin-left: 10px; font-size: small; max-width: 100%">
+        <p
+          style="
+            margin-left: 9px;
+            font-size: small;
+            color: #818181;
+            max-width: 100%;
+          "
+        >
           {{ formatNumber(artist.followers.total) + " followers" }}
         </p>
         <ngb-rating
-          style="margin-left: 10px; margin-top: 10px; font-size: 20px"
+          style="
+            margin-left: 10px;
+            margin-top: 10px;
+            font-size: 20px;
+            color: #adacac;
+          "
           [max]="5"
           [readonly]="true"
           [rate]="(artist.popularity * 5) / 100"

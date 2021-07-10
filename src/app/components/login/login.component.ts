@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { AuthError, AuthObject } from '../models/models';
-import { AuthService } from '../services/authService/auth.service';
+import { AuthError, AuthObject } from '../../models/models';
+import { AuthService } from '../../services/authService/auth.service';
 
 @Component({
   selector: 'app-login',

@@ -1,8 +1,8 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { createDefaultClause } from 'typescript';
-import { Artist } from '../models/models';
-import { AppService } from '../services/appService/app.service';
+import { Artist } from '../../models/models';
+import { AppService } from '../../services/appService/app.service';
 
 @Component({
   selector: 'app-search-artist',
@@ -27,12 +27,12 @@ export class SearchArtistComponent implements OnInit {
     this.activatedRoute.queryParams.subscribe((params) => {
       if (params['searchKey']) {
         this.searchValue = params['searchKey'];
-        this.SearchArtists(this.searchValue);
+        this.searchArtists(this.searchValue);
       }
     });
   }
 
-  SearchArtists(searchKey: string) {
+  searchArtists(searchKey: string) {
     this.myMethodChangingQueryParams(searchKey);
 
     if (searchKey == '') {

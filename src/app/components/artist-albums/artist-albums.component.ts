@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AppService } from '../services/appService/app.service';
+import { AppService } from '../../services/appService/app.service';
 
 @Component({
   selector: 'app-artist-albums',
