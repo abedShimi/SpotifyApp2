@@ -1,0 +1,27 @@
+.LoginContainer {
+  height: 100vh;
+}
+
+.LoginButton {
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .LoginButton {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 770px) and (min-width: 600px) {
+  .LoginButton {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 800px) and (min-width: 770px) {
+  .LoginButton {
+    font-size: 30px;
+  }
+}
